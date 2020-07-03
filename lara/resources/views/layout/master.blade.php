@@ -206,7 +206,7 @@
 <script src="{{asset('js/mqtt.min.js')}}"></script>
 <script src="{{asset('js/axios.min.js')}}"></script>
 <script>
-    window.ajaxCall = (api_end_point, data, method, callback, alert = false, base_url = '/') => {
+     function ajaxCall(api_end_point, data, method, callback, alert = false, base_url = '/')  {
         (async () => {
             await axios({
                 method: method,
@@ -224,7 +224,7 @@
         })();
 
     }
-    window.responseProcess = (response, alert, callback) => {
+    function responseProcess(response, alert, callback) {
         {
             if ((response.status || '').toLowerCase() === 'ok') {
                 if (alert)
