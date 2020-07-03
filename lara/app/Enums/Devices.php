@@ -6,7 +6,7 @@ namespace App\Enums;
 
 class Devices
 {
-    const LEDR  = 'led-right';
+    const LEDR  = 'led-red';
     const LEDG  = 'led-green';
     const LEDB  = 'led-blue';
     const LIGHT = 'light';

@@ -7,7 +7,7 @@
                     <div class="col-sm-12">
                         <div class="card p-2 mb-4">
                             <img src="https://cdn1.vectorstock.com/i/1000x1000/32/65/smart-house-or-iot-concept-smart-home-icons-set-vector-24483265.jpg"
-                                 width="140" height="20" alt="SYMBIOT 4" class="mx-auto">
+                                 width="5%;" alt="SYMBIOT 4" class="mx-auto">
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@
 
                             if (messageArray[0] === 'switch4') {
                                 if ($("#switch6").val() === 'off') {
-                                    ajaxCall('messages', {
+                                    ajaxCall('device-info', {
                                         'device_name': messageArray[0],
                                         'status' : messageArray[1]==='on',
                                         'topic' : topic,
@@ -402,7 +402,7 @@
                                 }
                             } else if (messageArray[0] === 'switch5') {
                                 if ($("#switch7").val() === 'off') {
-                                    ajaxCall('messages', {
+                                    ajaxCall('device-info', {
                                         'device_name': messageArray[0],
                                         'status' : messageArray[1]==='on',
                                         'topic' : topic,
@@ -411,7 +411,7 @@
                                     iot.switchSingle(this.id, messageArray[1]==='on');
                                 }
                             } else {
-                                ajaxCall('messages', {
+                                ajaxCall('device-info', {
                                     'device_name': messageArray[0],
                                     'status' : messageArray[1]==='on',
                                     'topic' : topic,
@@ -523,7 +523,7 @@
                         this.last = t.timeStamp;
 
                         client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
-                        ajaxCall('messages', {
+                        ajaxCall('device-info', {
                             'device_name': this.id,
                             'status' : this.checked,
                             'topic' : 'topic/ftflteam3/commands',
@@ -540,7 +540,7 @@
                     // First attempt on this switch element
                     this.last = t.timeStamp;
                     client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked  ? 'on' : 'off'));
-                    ajaxCall('messages', {
+                    ajaxCall('device-info', {
                         'device_name': this.id,
                         'status' : this.checked,
                         'topic' : 'topic/ftflteam3/commands',
