@@ -67,7 +67,6 @@ class DeviceInfoController extends Controller
                 $deviceState->update(['status' => $request->status]);
             }
         }
-
     }
 
     /**
