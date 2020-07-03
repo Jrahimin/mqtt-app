@@ -16,7 +16,7 @@ class CreateDeviceInfosTable extends Migration
         Schema::create('device_infos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('device_name');
-            $table->string('device_type');
+            $table->string('device_type')->nullable();
             $table->tinyInteger('status');
             $table->string('instr_from')->nullable();
             $table->string('topic')->nullable();
