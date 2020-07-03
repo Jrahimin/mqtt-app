@@ -15,6 +15,19 @@ class DeviceInfoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function dashboard(Request $request)
+    {
+        if(!$request->wantsJson())
+            return view('dashboard.switch-operation');
+
+        $deviceStates = DeviceState::all();
+
+        return response()->json([
+            'deviceSates' => $deviceStates
+        ]);
+    }
+
     public function index(Request $request)
     {
         if(!$request->wantsJson())
@@ -44,7 +57,7 @@ class DeviceInfoController extends Controller
     public function store(Request $request)
     {
         DeviceInfo::create([
-            'device_name' => $request->device_name,
+            'device_name' => config('device_map.'.$request->device_name),
             'device_type' => $request->device_type,
             'status' => !!$request->status,
             'instr_from' => $request->instr_from,

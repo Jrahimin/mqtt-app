@@ -6,9 +6,9 @@ namespace App\Enums;
 
 class Devices
 {
-    const LEDR  = 'ledR';
-    const LEDG  = 'ledG';
-    const LEDB  = 'ledB';
+    const LEDR  = 'led-right';
+    const LEDG  = 'led-green';
+    const LEDB  = 'led-blue';
     const LIGHT = 'light';
     const FAN   = 'fan';
 
