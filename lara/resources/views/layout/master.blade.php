@@ -118,7 +118,7 @@
                 </div>
             </form>
         </div>
-        <a class="navbar-brand px-lg-3 px-1 mr-0" href="#">SMART family</a>
+        <a class="navbar-brand px-lg-3 px-1 mr-0" href="javascript:void(0)">Home Genie</a>
         <div class="ml-auto">
             <div class="navbar-nav flex-row navbar-icons">
                 <div class="nav-item">
@@ -140,9 +140,9 @@
                         </svg>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="profile.html">Profile</a>
+                        <a class="dropdown-item" href="javascript:void(0)">Profile</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <a class="dropdown-item" href="javascript:void(0)">Logout</a>
                     </div>
                 </div>
                 <div class="nav-item d-lg-none">
@@ -156,10 +156,17 @@
         </div>
     </nav>
     <!-- Top navbar END -->
+
     <!-- wrapper-offcanvas START -->
     <div class="wrapper-offcanvas">
+        <!-- row-offcanvas START -->
+        <div class="row-offcanvas row-offcanvas-left">
+          @include('layout.side-bar')
         @yield('main-content')
+        </div>
+        <!-- row-offcanvas END -->
     </div>
+
     <!-- wrapper-offcanvas END -->
 </div>
 <!-- Wrapper END -->
