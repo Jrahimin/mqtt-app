@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/messages','MessageController@display');
+Route::post('/messages', 'MessageController@display');
 
 Route::resource('device-info', 'DeviceInfoController');
+
+
+Route::get('/smart-home', function () {
+        return view('dashboard.switch-operation');
+});
