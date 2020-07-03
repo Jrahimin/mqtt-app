@@ -46,7 +46,7 @@ class DeviceInfoController extends Controller
         DeviceInfo::create([
             'device_name' => $request->device_name,
             'device_type' => $request->device_type,
-            'status' => $request->status,
+            'status' => !!$request->status,
             'instr_from' => $request->instr_from,
             'topic' => $request->topic,
             'message' => $request->message,
@@ -58,10 +58,8 @@ class DeviceInfoController extends Controller
             if(!$request->status){
                 $onTime = Carbon::parse($deviceState->updated_at);
                 $nowTime = Carbon::parse(Carbon::now()->format('Y-m-d H:i:s'));
-
                 $timeOn = $nowTime->diffInSeconds($onTime);
                 $totalTimeOn = $deviceState->active_time_sec + $timeOn;
-
                 $deviceState->update(['status' => $request->status, 'active_time_sec' => $totalTimeOn]);
             }
         } else{
