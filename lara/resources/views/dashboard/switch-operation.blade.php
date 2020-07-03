@@ -139,18 +139,21 @@
                         <!-- Interior lights  START -->
                         <div class="card" data-unit-group="switch-lights">
                             <div class="card-body">
-                                <h3 class="card-title">Lights - interior</h3>
+                                <h5 class="card-title">
+                                    <span class="text-white-50" id="temperature"></span>
+                                    <span class="text-white-50 float-right" id="heart"></span>
+                                </h5>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex active" data-unit="switch-light-1">
+                                <li class="list-group-item d-flex active" data-unit="switch1">
                                     <svg class="icon-sprite">
                                         <use class="glow" fill="url(#radial-glow)"
                                              xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Kitchen</h5>
+                                    <h5>Blue LED</h5>
                                     <label class="switch ml-auto checked">
-                                        <input type="checkbox" id="switch-light-1" checked>
+                                        <input type="checkbox" id="switch1" checked>
                                     </label>
                                     <div class="info-holder info-rb" style="right:40px;">
                                         <div data-toggle="popover-all"
@@ -159,114 +162,90 @@
                                              data-placement="top" data-offset="0,-6"></div>
                                     </div>
                                 </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-2">
+                                <li class="list-group-item d-flex" data-unit="switch2">
                                     <svg class="icon-sprite">
                                         <use class="glow" fill="url(#radial-glow)"
                                              xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Dining room</h5>
+                                    <h5>Green LED</h5>
                                     <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-2">
+                                        <input type="checkbox" id="switch2">
                                     </label>
                                 </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-3">
+                                <li class="list-group-item d-flex" data-unit="switch3">
                                     <svg class="icon-sprite">
                                         <use class="glow" fill="url(#radial-glow)"
                                              xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Living room</h5>
+                                    <h5>Red LED</h5>
                                     <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-3">
+                                        <input type="checkbox" id="switch3">
                                     </label>
                                 </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-4">
+                                <li class="list-group-item d-flex" data-unit="switch4">
                                     <svg class="icon-sprite">
                                         <use class="glow" fill="url(#radial-glow)"
                                              xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Bedroom</h5>
+                                    <h5>Light</h5>
                                     <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-4">
-                                    </label>
-                                </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-5">
-                                    <svg class="icon-sprite">
-                                        <use class="glow" fill="url(#radial-glow)"
-                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
-                                        <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
-                                    </svg>
-                                    <h5>Bathroom</h5>
-                                    <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-5">
+                                        <input type="checkbox" id="switch4">
                                     </label>
                                 </li>
                             </ul>
-                            <div class="card-body">
-                                <div class="lights-controls" data-controls="switch-lights">
-                                    <button data-action="all-on" type="button" class="btn btn-primary lights-control">
-                                        All <strong>ON</strong></button>
-                                    <button data-action="all-off" type="button"
-                                            class="btn btn-secondary lights-control">All <strong>OFF</strong></button>
-                                </div>
-                            </div>
+                            {{--                            <div class="card-body">--}}
+                            {{--                                <div class="lights-controls" data-controls="switch-lights">--}}
+                            {{--                                    <button data-action="all-on" type="button" class="btn btn-primary lights-control">--}}
+                            {{--                                        All <strong>ON</strong></button>--}}
+                            {{--                                    <button data-action="all-off" type="button"--}}
+                            {{--                                            class="btn btn-secondary lights-control">All <strong>OFF</strong></button>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                         </div>
                         <!-- Interior lights  END -->
                     </div>
                     <div class="col-sm-12 col-md-6 col-xl-4">
                         <!-- Exterior lights  START -->
-                        <h3 class="card-title my-3">Lights - exterior</h3>
-                        <div class="card" data-unit="switch-light-6">
+                        {{--                        <h3 class="card-title my-3">Lights - exterior</h3>--}}
+                        <div class="card" data-unit="switch5">
                             <div class="card-body d-flex flex-row justify-content-start">
                                 <svg class="icon-sprite">
                                     <use class="glow" fill="url(#radial-glow)"
                                          xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                 </svg>
-                                <h5>Front doors</h5>
+                                <h5>Fan</h5>
                                 <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-6">
+                                    <input type="checkbox" id="switch5">
                                 </label>
                             </div>
                         </div>
-                        <div class="card" data-unit="switch-light-7">
+                        <div class="card" data-unit="switch6">
                             <div class="card-body d-flex">
                                 <svg class="icon-sprite">
                                     <use class="glow" fill="url(#radial-glow)"
                                          xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                 </svg>
-                                <h5>Back doors</h5>
+                                <h5>Light Auto Mode</h5>
                                 <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-7">
+                                    <input type="checkbox" id="switch6">
                                 </label>
                             </div>
                         </div>
-                        <div class="card" data-unit="switch-light-8">
+                        <div class="card" data-unit="switch7">
                             <div class="card-body d-flex">
                                 <svg class="icon-sprite">
                                     <use class="glow" fill="url(#radial-glow)"
                                          xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                 </svg>
-                                <h5>Pool</h5>
+                                <h5>Fan Auto Mood</h5>
                                 <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-8">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="card" data-unit="switch-light-9">
-                            <div class="card-body d-flex">
-                                <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)"
-                                         xlink:href="assets/images/icons-sprite.svg#glow"/>
-                                    <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
-                                </svg>
-                                <h5>Garage</h5>
-                                <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-9">
+                                    <input type="checkbox" id="switch7">
                                 </label>
                             </div>
                         </div>
@@ -432,24 +411,65 @@
 @endpush
 @section('js-custom')
     <script>
+        const topic1 = "topic/ftflteam3/commands";
+        const topic2 = "topic/ftflteam3/activities";
+        const topic3 = "topic/ftflteam3/heartbeats";
+        const topic4 = "topic/ftflteam3/temperature";
         $(document).ready(function () {
-
             //MQTT Client code start
-
-            var client = mqtt.connect('157.230.30.178:1883');
-            client.on('connect', function (event) {
-                client.subscribe('topic/ftfl/smart-home', function (err) {
+            var clientId = 'ftfl_' + Math.random().toString(16).substr(2, 8);
+            var client = mqtt.connect('http://mqtt.eclipse.org/mqtt', {clientId: clientId})
+            client.on('connect', function () {
+                client.subscribe('ftfl_home', function (err) {
                     if (!err) {
-                        client.publish('topic/ftfl/smart-home', 'Hello mqtt');
-                        console.log('enter in mqtt');
+                    }
+                })
+                client.subscribe('topic/ftflteam3/commands', function (err) {
+                    if (!err) {
+                    }
+                })
+                client.subscribe('topic/ftflteam3/activities', function (err) {
+                    if (!err) {
+                    }
+                })
+                client.subscribe('topic/ftflteam3/heartbeats', function (err) {
+                    if (!err) {
+                    }
+                })
+                client.subscribe('topic/ftflteam3/temperature', function (err) {
+                    if (!err) {
                     }
                 })
             });
-
             client.on('message', function (topic, message) {
-                // message is Buffer
-                console.log(message.toString())
-                // client.end()
+                switch (topic) {
+                    case 'topic/ftflteam3/activities':
+                        message = message.toString();
+                        const messageArray = message.split('-');
+                        if ($("#" + messageArray[0]).val() !== messageArray[1]) {
+
+                            if (messageArray[0] === 'switch4') {
+                                if ($("#switch6").val() === 'off') {
+                                    iot.switchSingle(this.id, messageArray[1]==='on');
+                                }
+                            } else if (messageArray[0] === 'switch5') {
+                                if ($("#switch7").val() === 'off') {
+                                    iot.switchSingle(this.id, messageArray[1]==='on');
+                                }
+                            } else {
+                                // $("#" + messageArray[0]).click();
+                                iot.switchSingle(this.id, messageArray[1]==='on');
+                            }
+                        }
+                        break;
+                    case 'topic/ftflteam3/heartbeats':
+                        $("#heart").html(message.toString() + "");
+                        break;
+                    case 'topic/ftflteam3/temperature':
+                        $("#temperature").html(message.toString() + "C");
+                        break;
+                    default:
+                }
             });
             //MQTT Client code end
 
@@ -515,6 +535,7 @@
                 // Save side menu status to localStorage if available (IE)
                 if (localStorage) {
                     checkboxValue = this.checked;
+                    console.log('542', checkboxValue);
                     localStorage.setItem('minifier', checkboxValue);
                 }
 
@@ -541,7 +562,7 @@
                     if (this.diff > 250) {
 
                         this.last = t.timeStamp;
-
+                        client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked === true ? 'on' : 'off'));
                         iot.switchSingle(this.id, this.checked);
 
                     } else {
@@ -552,20 +573,20 @@
 
                     // First attempt on this switch element
                     this.last = t.timeStamp;
-
+                    client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked === true ? 'on' : 'off'));
                     iot.switchSingle(this.id, this.checked);
 
                 }
             });
 
-            // All ON/OFF controls
-            $('.lights-control').click(function () {
-
-                var target = $(this).closest('.lights-controls').data('controls');
-                var action = $(this).data('action');
-                console.log(target, action);
-                iot.switchGroup(target, action);
-            });
+            // // All ON/OFF controls
+            // $('.lights-control').click(function () {
+            //
+            //     var target = $(this).closest('.lights-controls').data('controls');
+            //     var action = $(this).data('action');
+            //     console.log(target, action);
+            //     iot.switchGroup(target, action);
+            // });
 
             // Reposition to center when a modal is shown
             $('.modal.centered').on('show.bs.modal', iot.centerModal);
@@ -578,7 +599,7 @@
 
                 var target = $(this).closest('.timer-controls').data('controls');
                 var action = $(this).data('action');
-
+                //@todo
                 iot.garageDoors(target, action);
             });
 
