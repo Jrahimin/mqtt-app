@@ -7,32 +7,50 @@
             <ul class="nav flex-column nav-sidebar">
                 <li class="nav-item active">
                     <a class="nav-link active" href="index.html">
-                        <svg class="icon-sprite"><use xlink:href="assets/images/icons-sprite.svg#home"/></svg> Home
+                        <svg class="icon-sprite">
+                            <use xlink:href="assets/images/icons-sprite.svg#home"/>
+                        </svg>
+                        Home
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="lights.html">
-                        <svg class="icon-sprite"><use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/></svg> Lights
+                        <svg class="icon-sprite">
+                            <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
+                        </svg>
+                        Lights
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cameras.html">
-                        <svg class="icon-sprite"><use xlink:href="assets/images/icons-sprite.svg#camera"/></svg> Cameras
+                        <svg class="icon-sprite">
+                            <use xlink:href="assets/images/icons-sprite.svg#camera"/>
+                        </svg>
+                        Cameras
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="appliances.html">
-                        <svg class="icon-sprite"><use xlink:href="assets/images/icons-sprite.svg#appliances"/></svg> Appliances
+                        <svg class="icon-sprite">
+                            <use xlink:href="assets/images/icons-sprite.svg#appliances"/>
+                        </svg>
+                        Appliances
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="climate.html">
-                        <svg class="icon-sprite"><use xlink:href="assets/images/icons-sprite.svg#thermometer"/></svg> <span>Climate</span>
+                        <svg class="icon-sprite">
+                            <use xlink:href="assets/images/icons-sprite.svg#thermometer"/>
+                        </svg>
+                        <span>Climate</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">
-                        <svg class="icon-sprite"><use xlink:href="assets/images/icons-sprite.svg#settings"/></svg> Settings
+                        <svg class="icon-sprite">
+                            <use xlink:href="assets/images/icons-sprite.svg#settings"/>
+                        </svg>
+                        Settings
                     </a>
                 </li>
             </ul>
@@ -44,7 +62,8 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card p-2 mb-4">
-                            <img src="https://cdn1.vectorstock.com/i/1000x1000/32/65/smart-house-or-iot-concept-smart-home-icons-set-vector-24483265.jpg" width="140" height="20" alt="SYMBIOT 4" class="mx-auto">
+                            <img src="https://cdn1.vectorstock.com/i/1000x1000/32/65/smart-house-or-iot-concept-smart-home-icons-set-vector-24483265.jpg"
+                                 width="140" height="20" alt="SYMBIOT 4" class="mx-auto">
                         </div>
                     </div>
                 </div>
@@ -55,8 +74,10 @@
                             <div class="card-body d-flex flex-wrap">
                                 <svg class="icon-sprite icon-2x">
                                     <use xlink:href="assets/images/icons-sprite.svg#home"/>
-                                    <use class="subicon-unlocked" xlink:href="assets/images/icons-sprite.svg#subicon-unlocked"/>
-                                    <use class="subicon-locked" xlink:href="assets/images/icons-sprite.svg#subicon-locked"/>
+                                    <use class="subicon-unlocked"
+                                         xlink:href="assets/images/icons-sprite.svg#subicon-unlocked"/>
+                                    <use class="subicon-locked"
+                                         xlink:href="assets/images/icons-sprite.svg#subicon-locked"/>
                                 </svg>
                                 <div class="title-status">
                                     <h4>Security system</h4>
@@ -75,7 +96,8 @@
                             <div class="card-body">
                                 <div class="d-flex flex-wrap mb-2">
                                     <svg class="icon-sprite icon-1x">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#garage"/>
                                     </svg>
                                     <div class="title-status">
@@ -83,17 +105,29 @@
                                         <p class="status text-danger">Close</p>
                                     </div>
                                     <div class="ml-auto timer-controls" data-controls="garage-doors-1">
-                                        <button data-action="open" type="button" class="btn btn-secondary doors-control">Open</button>
-                                        <button data-action="pause" type="button" class="btn btn-secondary doors-control">Pause</button>
-                                        <button data-action="resume" type="button" class="btn btn-secondary doors-control">Resume</button>
-                                        <button data-action="close" type="button" class="btn btn-secondary doors-control">Close</button>
+                                        <button data-action="open" type="button"
+                                                class="btn btn-secondary doors-control">Open
+                                        </button>
+                                        <button data-action="pause" type="button"
+                                                class="btn btn-secondary doors-control">Pause
+                                        </button>
+                                        <button data-action="resume" type="button"
+                                                class="btn btn-secondary doors-control">Resume
+                                        </button>
+                                        <button data-action="close" type="button"
+                                                class="btn btn-secondary doors-control">Close
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="progress">
-                                    <div class="progress-bar progress-tiny timer" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="12"></div>
+                                    <div class="progress-bar progress-tiny timer" role="progressbar" aria-valuenow="0"
+                                         aria-valuemin="0" aria-valuemax="12"></div>
                                 </div>
                                 <div class="info-holder info-cb">
-                                    <div data-toggle="popover-all" data-content="Element driven by javascript (countdown timer)." data-original-title="Progress indicator" data-placement="top" data-offset="0,-12"></div>
+                                    <div data-toggle="popover-all"
+                                         data-content="Element driven by javascript (countdown timer)."
+                                         data-original-title="Progress indicator" data-placement="top"
+                                         data-offset="0,-12"></div>
                                 </div>
                             </div>
                         </div>
@@ -105,120 +139,113 @@
                         <!-- Interior lights  START -->
                         <div class="card" data-unit-group="switch-lights">
                             <div class="card-body">
-                                <h3 class="card-title">Lights - interior</h3>
+                                <h5 class="card-title">
+                                    <span class="text-white-50" id="temperature"></span>
+                                    <span class="text-white-50 float-right" id="heart"></span>
+                                </h5>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex active" data-unit="switch-light-1">
+                                <li class="list-group-item d-flex active" data-unit="switch1">
                                     <svg class="icon-sprite">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Kitchen</h5>
+                                    <h5>Blue LED</h5>
                                     <label class="switch ml-auto checked">
-                                        <input type="checkbox" id="switch-light-1" checked>
+                                        <input type="checkbox" id="switch1" checked>
                                     </label>
                                     <div class="info-holder info-rb" style="right:40px;">
-                                        <div data-toggle="popover-all" data-content="Checkbox element using localStorage to remember the last status." data-original-title="Switch ON/OFF" data-container="body" data-placement="top" data-offset="0,-6"></div>
+                                        <div data-toggle="popover-all"
+                                             data-content="Checkbox element using localStorage to remember the last status."
+                                             data-original-title="Switch ON/OFF" data-container="body"
+                                             data-placement="top" data-offset="0,-6"></div>
                                     </div>
                                 </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-2">
+                                <li class="list-group-item d-flex" data-unit="switch2">
                                     <svg class="icon-sprite">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Dining room</h5>
+                                    <h5>Green LED</h5>
                                     <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-2">
+                                        <input type="checkbox" id="switch2">
                                     </label>
                                 </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-3">
+                                <li class="list-group-item d-flex" data-unit="switch3">
                                     <svg class="icon-sprite">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Living room</h5>
+                                    <h5>Red LED</h5>
                                     <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-3">
+                                        <input type="checkbox" id="switch3">
                                     </label>
                                 </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-4">
+                                <li class="list-group-item d-flex" data-unit="switch4">
                                     <svg class="icon-sprite">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                     </svg>
-                                    <h5>Bedroom</h5>
+                                    <h5>Light</h5>
                                     <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-4">
-                                    </label>
-                                </li>
-                                <li class="list-group-item d-flex" data-unit="switch-light-5">
-                                    <svg class="icon-sprite">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
-                                        <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
-                                    </svg>
-                                    <h5>Bathroom</h5>
-                                    <label class="switch ml-auto">
-                                        <input type="checkbox" id="switch-light-5">
+                                        <input type="checkbox" id="switch4">
                                     </label>
                                 </li>
                             </ul>
-                            <div class="card-body">
-                                <div class="lights-controls" data-controls="switch-lights">
-                                    <button data-action="all-on" type="button" class="btn btn-primary lights-control">All <strong>ON</strong></button>
-                                    <button data-action="all-off" type="button" class="btn btn-secondary lights-control">All <strong>OFF</strong></button>
-                                </div>
-                            </div>
+                            {{--                            <div class="card-body">--}}
+                            {{--                                <div class="lights-controls" data-controls="switch-lights">--}}
+                            {{--                                    <button data-action="all-on" type="button" class="btn btn-primary lights-control">--}}
+                            {{--                                        All <strong>ON</strong></button>--}}
+                            {{--                                    <button data-action="all-off" type="button"--}}
+                            {{--                                            class="btn btn-secondary lights-control">All <strong>OFF</strong></button>--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
                         </div>
                         <!-- Interior lights  END -->
                     </div>
                     <div class="col-sm-12 col-md-6 col-xl-4">
                         <!-- Exterior lights  START -->
-                        <h3 class="card-title my-3">Lights - exterior</h3>
-                        <div class="card" data-unit="switch-light-6">
+                        {{--                        <h3 class="card-title my-3">Lights - exterior</h3>--}}
+                        <div class="card" data-unit="switch5">
                             <div class="card-body d-flex flex-row justify-content-start">
                                 <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                    <use class="glow" fill="url(#radial-glow)"
+                                         xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                 </svg>
-                                <h5>Front doors</h5>
+                                <h5>Fan</h5>
                                 <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-6">
+                                    <input type="checkbox" id="switch5">
                                 </label>
                             </div>
                         </div>
-                        <div class="card" data-unit="switch-light-7">
+                        <div class="card" data-unit="switch6">
                             <div class="card-body d-flex">
                                 <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                    <use class="glow" fill="url(#radial-glow)"
+                                         xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                 </svg>
-                                <h5>Back doors</h5>
+                                <h5>Light Auto Mode</h5>
                                 <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-7">
+                                    <input type="checkbox" id="switch6">
                                 </label>
                             </div>
                         </div>
-                        <div class="card" data-unit="switch-light-8">
+                        <div class="card" data-unit="switch7">
                             <div class="card-body d-flex">
                                 <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                    <use class="glow" fill="url(#radial-glow)"
+                                         xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
                                 </svg>
-                                <h5>Pool</h5>
+                                <h5>Fan Auto Mood</h5>
                                 <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-8">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="card" data-unit="switch-light-9">
-                            <div class="card-body d-flex">
-                                <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
-                                    <use xlink:href="assets/images/icons-sprite.svg#bulb-eco"/>
-                                </svg>
-                                <h5>Garage</h5>
-                                <label class="switch ml-auto">
-                                    <input type="checkbox" id="switch-light-9">
+                                    <input type="checkbox" id="switch7">
                                 </label>
                             </div>
                         </div>
@@ -235,7 +262,8 @@
                             <ul class="list-group borderless active" data-unit="wash-machine">
                                 <li class="list-group-item d-flex pb-0">
                                     <svg class="icon-sprite icon-1x">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#wash-machine"/>
                                     </svg>
                                     <h5>Washing machine</h5>
@@ -252,7 +280,8 @@
                             <ul class="list-group borderless active" data-unit="home-fridge">
                                 <li class="list-group-item d-flex pb-0">
                                     <svg class="icon-sprite icon-1x">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#home-fridge"/>
                                     </svg>
                                     <h5>Fridge</h5>
@@ -269,7 +298,8 @@
                             <ul class="list-group borderless" data-unit="tv-lcd">
                                 <li class="list-group-item d-flex">
                                     <svg class="icon-sprite icon-1x">
-                                        <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                        <use class="glow" fill="url(#radial-glow)"
+                                             xlink:href="assets/images/icons-sprite.svg#glow"/>
                                         <use xlink:href="assets/images/icons-sprite.svg#tv-lcd"/>
                                     </svg>
                                     <h5>TV</h5>
@@ -288,8 +318,8 @@
                             <div class="card-img-top card-stream">
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <video muted loop>
-                                        <source src="assets/videos/street.mp4" type="video/mp4" />
-                                        <source src="assets/videos/street.webm" type="video/webm" />
+                                        <source src="assets/videos/street.mp4" type="video/mp4"/>
+                                        <source src="assets/videos/street.webm" type="video/webm"/>
                                     </video>
                                     <div class="card-preloader">
                                         <div class="center-preloader d-flex align-items-center">
@@ -308,7 +338,8 @@
                             </div>
                             <div class="card-body d-flex">
                                 <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                    <use class="glow" fill="url(#radial-glow)"
+                                         xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#camera"/>
                                 </svg>
                                 <h5>Outdoor front</h5>
@@ -325,8 +356,8 @@
                             <div class="card-img-top card-stream">
                                 <div class="embed-responsive embed-responsive-16by9">
                                     <video muted loop>
-                                        <source src="assets/videos/room.mp4" type="video/mp4" />
-                                        <source src="assets/videos/room.webm" type="video/webm" />
+                                        <source src="assets/videos/room.mp4" type="video/mp4"/>
+                                        <source src="assets/videos/room.webm" type="video/webm"/>
                                     </video>
                                     <div class="card-preloader">
                                         <div class="center-preloader d-flex align-items-center">
@@ -345,7 +376,8 @@
                             </div>
                             <div class="card-body d-flex">
                                 <svg class="icon-sprite">
-                                    <use class="glow" fill="url(#radial-glow)" xlink:href="assets/images/icons-sprite.svg#glow"/>
+                                    <use class="glow" fill="url(#radial-glow)"
+                                         xlink:href="assets/images/icons-sprite.svg#glow"/>
                                     <use xlink:href="assets/images/icons-sprite.svg#camera"/>
                                 </svg>
                                 <h5>Joe's room</h5>
@@ -361,7 +393,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <!-- Demonstration - buttons -->
-                        <button type="button" class="btn btn-lg btn-danger mx-2 my-2" data-toggle="modal" data-target="#alarmModal"> Test ALARM </button>
+                        <button type="button" class="btn btn-lg btn-danger mx-2 my-2" data-toggle="modal"
+                                data-target="#alarmModal"> Test ALARM
+                        </button>
                     </div>
                 </div>
             </div>
@@ -377,24 +411,65 @@
 @endpush
 @section('js-custom')
     <script>
-        $(document).ready(function() {
-
+        const topic1 = "topic/ftflteam3/commands";
+        const topic2 = "topic/ftflteam3/activities";
+        const topic3 = "topic/ftflteam3/heartbeats";
+        const topic4 = "topic/ftflteam3/temperature";
+        $(document).ready(function () {
             //MQTT Client code start
-
-            var client = mqtt.connect('157.230.30.178:1883');
-            client.on('connect', function(event) {
-                console.log(event);
-                client.subscribe('topic/ftflteam3/general', function(err) {
+            var clientId = 'ftfl_' + Math.random().toString(16).substr(2, 8);
+            var client = mqtt.connect('http://mqtt.eclipse.org/mqtt', {clientId: clientId})
+            client.on('connect', function () {
+                client.subscribe('ftfl_home', function (err) {
                     if (!err) {
-                        client.publish('topic/ftflteam3/general', 'Hello mqtt')
+                    }
+                })
+                client.subscribe('topic/ftflteam3/commands', function (err) {
+                    if (!err) {
+                    }
+                })
+                client.subscribe('topic/ftflteam3/activities', function (err) {
+                    if (!err) {
+                    }
+                })
+                client.subscribe('topic/ftflteam3/heartbeats', function (err) {
+                    if (!err) {
+                    }
+                })
+                client.subscribe('topic/ftflteam3/temperature', function (err) {
+                    if (!err) {
                     }
                 })
             });
+            client.on('message', function (topic, message) {
+                switch (topic) {
+                    case 'topic/ftflteam3/activities':
+                        message = message.toString();
+                        const messageArray = message.split('-');
+                        if ($("#" + messageArray[0]).val() !== messageArray[1]) {
 
-            client.on('topic/ftflteam3/general', function(topic, message) {
-                // message is Buffer
-                console.log(message.toString())
-                client.end()
+                            if (messageArray[0] === 'switch4') {
+                                if ($("#switch6").val() === 'off') {
+                                    iot.switchSingle(this.id, messageArray[1]==='on');
+                                }
+                            } else if (messageArray[0] === 'switch5') {
+                                if ($("#switch7").val() === 'off') {
+                                    iot.switchSingle(this.id, messageArray[1]==='on');
+                                }
+                            } else {
+                                // $("#" + messageArray[0]).click();
+                                iot.switchSingle(this.id, messageArray[1]==='on');
+                            }
+                        }
+                        break;
+                    case 'topic/ftflteam3/heartbeats':
+                        $("#heart").html(message.toString() + "");
+                        break;
+                    case 'topic/ftflteam3/temperature':
+                        $("#temperature").html(message.toString() + "C");
+                        break;
+                    default:
+                }
             });
             //MQTT Client code end
 
@@ -422,7 +497,7 @@
                 // Switch statuses
                 var switchValues = JSON.parse(localStorage.getItem('switchValues')) || {};
 
-                $.each(switchValues, function(key, value) {
+                $.each(switchValues, function (key, value) {
 
                     // Apply only if element is included on the page
                     if ($('[data-unit="' + key + '"]').length) {
@@ -453,13 +528,14 @@
 
 
             // Contract/expand side menu on click. (only large screens)
-            $('#minifier').click(function() {
+            $('#minifier').click(function () {
 
                 $('#sidebar,#menu-minifier').toggleClass('mini');
 
                 // Save side menu status to localStorage if available (IE)
                 if (localStorage) {
                     checkboxValue = this.checked;
+                    console.log('542', checkboxValue);
                     localStorage.setItem('minifier', checkboxValue);
                 }
 
@@ -467,13 +543,13 @@
 
 
             // Side menu toogler for medium and small screens
-            $('[data-toggle="offcanvas"]').click(function() {
+            $('[data-toggle="offcanvas"]').click(function () {
                 $('.row-offcanvas').toggleClass('active');
             });
 
 
             // Switch (checkbox element) toogler
-            $('.switch input[type="checkbox"]').on("change", function(t) {
+            $('.switch input[type="checkbox"]').on("change", function (t) {
 
                 // Check the time between changes to prevert Android native browser execute twice
                 // If you dont need support for Android native browser - just call "switchSingle" function
@@ -486,7 +562,7 @@
                     if (this.diff > 250) {
 
                         this.last = t.timeStamp;
-
+                        client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked === true ? 'on' : 'off'));
                         iot.switchSingle(this.id, this.checked);
 
                     } else {
@@ -497,20 +573,20 @@
 
                     // First attempt on this switch element
                     this.last = t.timeStamp;
-
+                    client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked === true ? 'on' : 'off'));
                     iot.switchSingle(this.id, this.checked);
 
                 }
             });
 
-            // All ON/OFF controls
-            $('.lights-control').click(function() {
-
-                var target = $(this).closest('.lights-controls').data('controls');
-                var action = $(this).data('action');
-
-                iot.switchGroup(target, action);
-            });
+            // // All ON/OFF controls
+            // $('.lights-control').click(function () {
+            //
+            //     var target = $(this).closest('.lights-controls').data('controls');
+            //     var action = $(this).data('action');
+            //     console.log(target, action);
+            //     iot.switchGroup(target, action);
+            // });
 
             // Reposition to center when a modal is shown
             $('.modal.centered').on('show.bs.modal', iot.centerModal);
@@ -519,16 +595,16 @@
             $('#armModal').on('hide.bs.modal', iot.clearCountdown);
 
             // Garage doors controls
-            $('.doors-control').click(function() {
+            $('.doors-control').click(function () {
 
                 var target = $(this).closest('.timer-controls').data('controls');
                 var action = $(this).data('action');
-
+                //@todo
                 iot.garageDoors(target, action);
             });
 
             // Alerts "Close" callback - hide modal and alert indicator dot when user closes all alerts
-            $('#alertsModal .alert').on('close.bs.alert', function() {
+            $('#alertsModal .alert').on('close.bs.alert', function () {
                 var sum = $('#alerts-toggler').attr('data-alerts');
                 sum = sum - 1;
                 $('#alerts-toggler').attr('data-alerts', sum);
@@ -542,7 +618,7 @@
             });
 
             // Show/hide tips (popovers) - FAB button (right bottom on large screens)
-            $('#info-toggler').click(function() {
+            $('#info-toggler').click(function () {
 
                 if ($('body').hasClass('info-active')) {
                     $('[data-toggle="popover-all"]').popover('hide');
@@ -554,7 +630,7 @@
             });
 
             // Hide tips (popovers) by clicking outside
-            $('body').on('click', function(pop) {
+            $('body').on('click', function (pop) {
 
                 if (pop.target.id !== 'info-toggler' && $('body').hasClass('info-active')) {
                     $('[data-toggle="popover-all"]').popover('hide');
@@ -566,7 +642,7 @@
         });
 
         // Apply necessary changes, functionality when content is loaded
-        $(window).on('load', function() {
+        $(window).on('load', function () {
 
             // This script is necessary for cross browsers icon sprite support (IE9+, ...)
             svg4everybody();
@@ -576,7 +652,7 @@
                 countdown: true,
                 format: '%H:%M:%S',
                 duration: '1h17m10s',
-                callback: function() {
+                callback: function () {
                     $('[data-unit="wash-machine"]').removeClass("active");
                 }
             });
@@ -606,7 +682,7 @@
             }
 
             // "Timeout" function is not neccessary - important is to hide the preloader overlay
-            setTimeout(function() {
+            setTimeout(function () {
 
                 // Hide preloader overlay when content is loaded
                 $('#iot-preloader,.card-preloader').fadeOut();
@@ -620,7 +696,7 @@
         });
 
         // Apply necessary changes if window resized
-        $(window).on('resize', function() {
+        $(window).on('resize', function () {
 
             // Modal reposition when the window is resized
             $('.modal.centered:visible').each(iot.centerModal);
