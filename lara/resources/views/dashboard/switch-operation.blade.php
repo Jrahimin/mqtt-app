@@ -450,14 +450,31 @@
 
                             if (messageArray[0] === 'switch4') {
                                 if ($("#switch6").val() === 'off') {
+                                    ajaxCall('messages', {
+                                        'device_name': messageArray[0],
+                                        'status' : messageArray[1]==='on',
+                                        'topic' : topic,
+                                        'message': message,
+                                    }, 'post', (data, code, message) => {}, false)
                                     iot.switchSingle(this.id, messageArray[1]==='on');
                                 }
                             } else if (messageArray[0] === 'switch5') {
                                 if ($("#switch7").val() === 'off') {
+                                    ajaxCall('messages', {
+                                        'device_name': messageArray[0],
+                                        'status' : messageArray[1]==='on',
+                                        'topic' : topic,
+                                        'message': message,
+                                    }, 'post', (data, code, message) => {}, false)
                                     iot.switchSingle(this.id, messageArray[1]==='on');
                                 }
                             } else {
-                                // $("#" + messageArray[0]).click();
+                                ajaxCall('messages', {
+                                    'device_name': messageArray[0],
+                                    'status' : messageArray[1]==='on',
+                                    'topic' : topic,
+                                    'message': message,
+                                }, 'post', (data, code, message) => {}, false)
                                 iot.switchSingle(this.id, messageArray[1]==='on');
                             }
                         }
@@ -562,7 +579,14 @@
                     if (this.diff > 250) {
 
                         this.last = t.timeStamp;
-                        client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked === true ? 'on' : 'off'));
+
+                        client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
+                        ajaxCall('messages', {
+                            'device_name': this.id,
+                            'status' : this.checked,
+                            'topic' : 'topic/ftflteam3/commands',
+                            'message': this.id + '-' + (this.checked  ? 'on' : 'off'),
+                        }, 'post', (data, code, message) => {}, false)
                         iot.switchSingle(this.id, this.checked);
 
                     } else {
@@ -573,7 +597,13 @@
 
                     // First attempt on this switch element
                     this.last = t.timeStamp;
-                    client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked === true ? 'on' : 'off'));
+                    client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked  ? 'on' : 'off'));
+                    ajaxCall('messages', {
+                        'device_name': this.id,
+                        'status' : this.checked,
+                        'topic' : 'topic/ftflteam3/commands',
+                        'message': this.id + '-' + (this.checked  ? 'on' : 'off'),
+                    }, 'post', (data, code, message) => {}, false)
                     iot.switchSingle(this.id, this.checked);
 
                 }
