@@ -389,35 +389,34 @@
                         message = message.toString();
                         const messageArray = message.split('-');
                         if ($("#" + messageArray[0]).val() !== messageArray[1]) {
-
                             if (messageArray[0] === 'switch4') {
                                 if ($("#switch6").val() === 'off') {
+                                    iot.switchSingle(this.id, messageArray[1]==='on');
                                     ajaxCall('messages', {
                                         'device_name': messageArray[0],
                                         'status' : messageArray[1]==='on',
                                         'topic' : topic,
                                         'message': message,
                                     }, 'post', (data, code, message) => {}, false)
-                                    iot.switchSingle(this.id, messageArray[1]==='on');
                                 }
                             } else if (messageArray[0] === 'switch5') {
                                 if ($("#switch7").val() === 'off') {
+                                    iot.switchSingle(this.id, messageArray[1]==='on');
                                     ajaxCall('messages', {
                                         'device_name': messageArray[0],
                                         'status' : messageArray[1]==='on',
                                         'topic' : topic,
                                         'message': message,
                                     }, 'post', (data, code, message) => {}, false)
-                                    iot.switchSingle(this.id, messageArray[1]==='on');
                                 }
                             } else {
+                                iot.switchSingle(this.id, messageArray[1]==='on');
                                 ajaxCall('messages', {
                                     'device_name': messageArray[0],
                                     'status' : messageArray[1]==='on',
                                     'topic' : topic,
                                     'message': message,
                                 }, 'post', (data, code, message) => {}, false)
-                                iot.switchSingle(this.id, messageArray[1]==='on');
                             }
                         }
                         break;
@@ -431,7 +430,6 @@
                 }
             });
             //MQTT Client code end
-
             // Get checkbox statuses from localStorage if available (IE)
             if (localStorage) {
 
@@ -522,6 +520,7 @@
 
                         this.last = t.timeStamp;
 
+                        iot.switchSingle(this.id, this.checked);
                         client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
                         ajaxCall('messages', {
                             'device_name': this.id,
@@ -529,7 +528,6 @@
                             'topic' : 'topic/ftflteam3/commands',
                             'message': this.id + '-' + (this.checked  ? 'on' : 'off'),
                         }, 'post', (data, code, message) => {}, false)
-                        iot.switchSingle(this.id, this.checked);
 
                     } else {
                         return false;
@@ -539,6 +537,7 @@
 
                     // First attempt on this switch element
                     this.last = t.timeStamp;
+                    iot.switchSingle(this.id, this.checked);
                     client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked  ? 'on' : 'off'));
                     ajaxCall('messages', {
                         'device_name': this.id,
@@ -546,7 +545,6 @@
                         'topic' : 'topic/ftflteam3/commands',
                         'message': this.id + '-' + (this.checked  ? 'on' : 'off'),
                     }, 'post', (data, code, message) => {}, false)
-                    iot.switchSingle(this.id, this.checked);
 
                 }
             });
