@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::post('/messages','MessageController@display');
+
+Route::resource('device-info', 'DeviceInfoController');
