@@ -87,11 +87,11 @@ class DeviceInfoController extends Controller
 
                     $totalTimeOn = $deviceState->active_time_sec + $timeOn;
 
-                    $deviceState->update(['status' => $request->status, 'active_time_sec' => $totalTimeOn]);
+                    $deviceState->update(['status' => !!$request->status, 'active_time_sec' => $totalTimeOn]);
                 }
             } else{
                 if($request->status){
-                    $deviceState->update(['status' => $request->status]);
+                    $deviceState->update(['status' => !!$request->status]);
                 }
             }
         }

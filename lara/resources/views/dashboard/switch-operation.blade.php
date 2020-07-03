@@ -394,6 +394,7 @@
                             if (messageArray[0] === 'switch4') {
                                 if ($("#switch6").val() === 'off') {
                                     flag = false;
+                                    $("#" + messageArray[0]).val($("#" + messageArray[0]).val()=='on'?'off':'on');
                                     $("#" + messageArray[0]).click();
                                     // iot.switchSingle(messageArray[0], messageArray[1]==='on');
                                     ajaxCall('device-info', {
@@ -407,6 +408,7 @@
                             } else if (messageArray[0] === 'switch5') {
                                 if ($("#switch7").val() === 'off') {
                                     flag = false;
+                                    $("#" + messageArray[0]).val($("#" + messageArray[0]).val()=='on'?'off':'on');
                                     $("#" + messageArray[0]).click();
                                     ajaxCall('device-info', {
                                         'device_name': messageArray[0],
@@ -418,6 +420,7 @@
                                 }
                             } else {
                                 flag = false;
+                                $("#" + messageArray[0]).val($("#" + messageArray[0]).val()=='on'?'off':'on');
                                 $("#" + messageArray[0]).click();
                                 ajaxCall('device-info', {
                                     'device_name': messageArray[0],
