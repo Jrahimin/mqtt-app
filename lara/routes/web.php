@@ -14,8 +14,6 @@
 
 Route::get('/', 'DeviceInfoController@dashboard');
 
-Route::post('/messages', 'MessageController@display');
-
 Route::resource('device-info', 'DeviceInfoController');
 
 

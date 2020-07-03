@@ -7,6 +7,7 @@ use App\Models\DeviceState;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class DeviceInfoController extends Controller
 {
@@ -56,29 +57,46 @@ class DeviceInfoController extends Controller
      */
     public function store(Request $request)
     {
-        DeviceInfo::create([
-            'device_name' => config('device_map.'.$request->device_name),
-            'device_type' => $request->device_type,
-            'status' => !!$request->status,
-            'instr_from' => $request->instr_from,
-            'topic' => $request->topic,
-            'message' => $request->message,
-        ]);
+        try{
+            Log::debug("DeviceInfo store req : ".json_encode($request->all()));
 
-        $deviceState = DeviceState::where('device_name', $request->device_name)->first();
+            $deviceName = config('device_map.'.$request->device_name);
 
-        if($deviceState->status){
-            if(!$request->status){
-                $onTime = Carbon::parse($deviceState->updated_at);
-                $nowTime = Carbon::parse(Carbon::now()->format('Y-m-d H:i:s'));
-                $timeOn = $nowTime->diffInSeconds($onTime);
-                $totalTimeOn = $deviceState->active_time_sec + $timeOn;
-                $deviceState->update(['status' => $request->status, 'active_time_sec' => $totalTimeOn]);
+            Log::debug("Device name : {$deviceName}");
+
+            DeviceInfo::create([
+                'device_name' => $deviceName,
+                'device_type' => $request->device_type,
+                'status' => !!$request->status,
+                'instr_from' => $request->instr_from,
+                'topic' => $request->topic,
+                'message' => $request->message,
+            ]);
+
+            $deviceState = DeviceState::where('device_name', $deviceName)->first();
+
+            Log::debug("Device state : ".json_encode($deviceState));
+
+            if($deviceState->status){
+                if(!$request->status){
+                    $onTime = Carbon::parse($deviceState->updated_at);
+                    $nowTime = Carbon::parse(Carbon::now()->format('Y-m-d H:i:s'));
+                    $timeOn = $nowTime->diffInSeconds($onTime);
+
+                    Log::debug("Time on : {$timeOn}");
+
+                    $totalTimeOn = $deviceState->active_time_sec + $timeOn;
+
+                    $deviceState->update(['status' => $request->status, 'active_time_sec' => $totalTimeOn]);
+                }
+            } else{
+                if($request->status){
+                    $deviceState->update(['status' => $request->status]);
+                }
             }
-        } else{
-            if($request->status){
-                $deviceState->update(['status' => $request->status]);
-            }
+        }
+        catch (\Exception $e){
+            Log::error($e->getMessage().' '.$e->getLine().' '.$e->getFile());
         }
     }
 
