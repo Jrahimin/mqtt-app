@@ -389,13 +389,14 @@
                     case 'topic/ftflteam3/activities':
                         message = message.toString();
                         const messageArray = message.split('-');
-                        console.log($("#" + messageArray[0]).val(), messageArray[1]);
+                        if (messageArray[0] === 'switch1') {
+                            console.log(messageArray[0], messageArray[1]);
+                            console.log($("#" + messageArray[0]).val());
+                        }
                         if ($("#" + messageArray[0]).val() !== messageArray[1]) {
                             if (messageArray[0] === 'switch4') {
                                 if ($("#switch6").val() === 'off') {
-                                    flag = false;
-                                    $("#" + messageArray[0]).val($("#" + messageArray[0]).val()=='on'?'off':'on');
-                                    $("#" + messageArray[0]).click();
+                                    keyUpdate(messageArray[0], messageArray[1] === 'on');
                                     // iot.switchSingle(messageArray[0], messageArray[1]==='on');
                                     ajaxCall('device-info', {
                                         'device_name': messageArray[0],
@@ -407,9 +408,7 @@
                                 }
                             } else if (messageArray[0] === 'switch5') {
                                 if ($("#switch7").val() === 'off') {
-                                    flag = false;
-                                    $("#" + messageArray[0]).val($("#" + messageArray[0]).val()=='on'?'off':'on');
-                                    $("#" + messageArray[0]).click();
+                                    keyUpdate(messageArray[0], messageArray[1] === 'on');
                                     ajaxCall('device-info', {
                                         'device_name': messageArray[0],
                                         'status': messageArray[1] === 'on',
@@ -419,9 +418,8 @@
                                     }, false)
                                 }
                             } else {
-                                flag = false;
-                                $("#" + messageArray[0]).val($("#" + messageArray[0]).val()=='on'?'off':'on');
-                                $("#" + messageArray[0]).click();
+                                console.log(messageArray[0], messageArray[1] === 'on');
+                                keyUpdate(messageArray[0], messageArray[1] === 'on');
                                 ajaxCall('device-info', {
                                     'device_name': messageArray[0],
                                     'status': messageArray[1] === 'on',
@@ -444,14 +442,12 @@
             //MQTT Client code end
             // Get checkbox statuses from localStorage if available (IE)
             if (localStorage) {
-
                 // Menu minifier status (Contract/expand side menu on large screens)
                 var checkboxValue = localStorage.getItem('minifier');
 
                 if (checkboxValue === 'true') {
                     $('#sidebar,#menu-minifier').addClass('mini');
                     $('#minifier').prop('checked', true);
-
                 } else {
 
                     if ($('#minifier').is(':checked')) {
@@ -463,35 +459,37 @@
                     }
                 }
 
-                // Switch statuses
-                var switchValues = JSON.parse(localStorage.getItem('switchValues')) || {};
-
-                $.each(switchValues, function (key, value) {
-
+                function keyUpdate(key, value) {
                     // Apply only if element is included on the page
                     if ($('[data-unit="' + key + '"]').length) {
-
                         if (value === true) {
-
                             // Apply appearance of the "unit" and checkbox element
                             $('[data-unit="' + key + '"]').addClass("active");
                             $("#" + key).prop('checked', true);
                             $("#" + key).closest("label").addClass("checked");
-
+                            $("#" + key).val('on');
                             //In case of Camera unit - play video
                             if (key === "switch-camera-1" || key === "switch-camera-2") {
                                 $('[data-unit="' + key + '"] video')[0].play();
                             }
-
                         } else {
                             $('[data-unit="' + key + '"]').removeClass("active");
                             $("#" + key).prop('checked', false);
                             $("#" + key).closest("label").removeClass("checked");
+                            $("#" + key).val('off');
                             if (key === "switch-camera-1" || key === "switch-camera-2") {
                                 $('[data-unit="' + key + '"] video')[0].pause();
                             }
                         }
                     }
+                }
+
+                // Switch statuses
+                var switchValues = JSON.parse(localStorage.getItem('switchValues')) || {};
+
+                $.each(switchValues, function (key, value) {
+                    keyUpdate(key, value);
+
                 });
             }
 
@@ -533,18 +531,14 @@
                         this.last = t.timeStamp;
 
                         iot.switchSingle(this.id, this.checked);
-                        if (flag == true) {
-                            client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
-                            ajaxCall('device-info', {
-                                'device_name': this.id,
-                                'status': this.checked,
-                                'topic': 'topic/ftflteam3/commands',
-                                'message': this.id + '-' + (this.checked ? 'on' : 'off'),
-                            }, 'post', (data, code, message) => {
-                            }, false)
-                        } else {
-                            flag = true;
-                        }
+                        client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
+                        ajaxCall('device-info', {
+                            'device_name': this.id,
+                            'status': this.checked,
+                            'topic': 'topic/ftflteam3/commands',
+                            'message': this.id + '-' + (this.checked ? 'on' : 'off'),
+                        }, 'post', (data, code, message) => {
+                        }, false);
                     } else {
                         return false;
                     }
@@ -554,19 +548,14 @@
                     // First attempt on this switch element
                     this.last = t.timeStamp;
                     iot.switchSingle(this.id, this.checked);
-                    if (flag == true) {
-                        client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
-                        ajaxCall('device-info', {
-                            'device_name': this.id,
-                            'status': this.checked,
-                            'topic': 'topic/ftflteam3/commands',
-                            'message': this.id + '-' + (this.checked ? 'on' : 'off'),
-                        }, 'post', (data, code, message) => {
-                        }, false)
-                    } else {
-                        flag = true;
-                    }
-
+                    client.publish('topic/ftflteam3/commands', this.id + '-' + (this.checked ? 'on' : 'off'));
+                    ajaxCall('device-info', {
+                        'device_name': this.id,
+                        'status': this.checked,
+                        'topic': 'topic/ftflteam3/commands',
+                        'message': this.id + '-' + (this.checked ? 'on' : 'off'),
+                    }, 'post', (data, code, message) => {
+                    }, false);
                 }
             });
 
